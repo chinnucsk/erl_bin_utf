@@ -1,5 +1,5 @@
 # Hello
-This is tiny unicode binary string manipulation lib for erlang. Since I didn't find any simple and efficient way to do this in erlang, I wrote this little lib.
+This is tiny unicode binary string manipulation lib for erlang. I wrote it since I didn't find any simple and efficient way to do this.
 
 It was optimized following [erlang efficiency guide](http://www.erlang.org/doc/efficiency_guide/binaryhandling.html) and seems to be very fast.
 
@@ -17,3 +17,6 @@ It was optimized following [erlang efficiency guide](http://www.erlang.org/doc/e
 
 	Str = <<"привет">>,
 	<<"ив">> = bin_utf:substr(Str, 2, 2).
+
+# License
+MIT
