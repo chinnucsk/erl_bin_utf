@@ -1,7 +1,7 @@
 %%
 %% bin_utf
 %% Tiny unicode binary string manipulation lib for erlang
-%% Copyright 2013 by Yuriy Bogdanov <chinsay@gmail.com>
+%% Copyright 2013 by Yuriy Bogdanov <chinsay gmail>
 %%
 %% (MIT LICENSE)
 %% Permission is hereby granted, free of charge, to any person obtaining a copy
