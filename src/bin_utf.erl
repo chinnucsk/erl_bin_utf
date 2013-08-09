@@ -24,7 +24,7 @@
 
 -module(bin_utf).
 
--export([len/1, substr/2, substr/3]).
+-export([len/1, substr/2, substr/3, is_unicode_valid/1]).
 
 -spec len(String :: iolist()) -> non_neg_integer().
 
@@ -62,6 +62,11 @@ substr(<<C/utf8, Rest/binary>>, Start, Len, I, Acc, L) when I >= Start andalso L
 substr(<<_/utf8, Rest/binary>>, Start, Len, I, Acc, 0) ->
   substr(Rest, Start, Len, I + 1, Acc, 0);
 substr(_String, _Start, L, _I, Acc, L) -> Acc.
+
+-spec is_unicode_valid(Str :: iolist()) -> true | false.
+
+is_unicode_valid(Str) ->
+  is_binary(unicode:characters_to_binary(Str)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
